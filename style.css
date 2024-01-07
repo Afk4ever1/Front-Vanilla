@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* general reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  color: #faf6f0;
+  scroll-behavior: smooth;
+}
+/* Hero Section */
+#hero {
+  min-height: 100vh;
+  background-image: url(./Images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 10px 50px 0 0;
+  font-weight: bold;
+}
+.logoo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-left: 1%;
+  text-shadow: 2px 2px grey;
+}
+.navmenu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+
+  a,
+  a:visited a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+}
+.name {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 5%;
+  height: 70vh;
+  gap: 5px;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 2.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Projects Section */
+#project {
+  min-height: 100vh;
+  background-image: radial-gradient(
+      rgba(31, 27, 27, 0.7),
+      rgba(31, 27, 27, 0.8)
+    ),
+    url(./Images/Project-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-proj {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.proj {
+  margin: 25px 10px;
+  height: 80vh;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  border: 2px solid #f4dfc8;
+}
+.proj > div {
+  border: 2px solid black;
+}
+.proj > div figcaption {
+  text-align: center;
+}
+.proj > div h3 {
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
+}
+.proj > div:hover {
+  box-shadow: 0 8px 16px 0 #f4dfc85c;
+}
+.proj img {
+  border-bottom: 2px solid #f4dfc8;
+}
+/* About Section */
+#about {
+  min-height: 100vh;
+  background-image: url(./Images/About-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.abt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  height: 80vh;
+  font-size: 2rem;
+}
+.det {
+  width: 50%;
+  margin-top: 200px;
+  margin-right: 50px;
+  padding: 20px;
+  border: 5px double #000;
+  color: aliceblue;
+  background-image: radial-gradient(
+    rgba(31, 27, 27, 0.1),
+    rgba(31, 27, 27, 0.2)
+  );
+}
+.contact {
+  padding: 25px;
+  margin-right: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact svg {
+  fill: #333;
+}
+@media (max-width: 1403px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 1403px;
+  }
+
+  .proj {
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 992px;
+  }
+  .abt {
+    align-items: center;
+  }
+  .det {
+    width: 80%;
+    margin: 150px 10px 10px 10px;
+  }
+}
+@media (max-width: 850px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 850px;
+  }
+  .navbar {
+    margin: 0;
+    padding: 0;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .logoo {
+    color: #333;
+    text-shadow: 2px 2px grey;
+  }
+  .navmenu {
+    flex-flow: row nowrap;
+    font-size: 2rem;
+    border-top: 2px solid #f4dfc8;
+  }
+  .navmenu a,
+  .navmenu a:hover,
+  .navmenu a:visited {
+    color: #faf6f0;
+    text-decoration: none;
+  }
+  .name {
+    align-items: center;
+    text-align: center;
+  }
+  .logoo {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 705px) {
+  .det {
+    font-size: 1.5rem;
+  }
+  .det h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 650px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 650px;
+  }
+  .navmenu {
+    font-size: 2rem;
+  }
+  .det {
+    width: 95%;
+  }
+}
+@media (max-width: 540px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 540px;
+  }
+  .navmenu {
+    gap: 15px;
+  }
+  .name {
+    margin-top: -25px;
+    margin-left: 15px;
+  }
+}
+@media (max-width: 460px) {
+  #hero,
+  #project,
+  #about {
+    max-width: 460px;
+  }
+  a,
+  h1,
+  h2,
+  h3,
+  p {
+    font-size: 1rem;
+  }
+  .det p {
+    font-size: 1.25rem;
+  }
+  .navmenu a {
+    font-size: 1.5rem;
+  }
+  .name h1,
+  .name h2 {
+    font-size: 3rem;
+  }
+  .title-proj h2 {
+    font-size: 3rem;
+  }
+  .contact {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
